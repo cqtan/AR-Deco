@@ -1,5 +1,5 @@
 # AR Decorator
-
+[Example inspired by IKEA's PLACE app](https://bitbucket.org/repo/9pgMjga/images/1531028719-ikea_exp.jpg)
 ----
 ## Zusammenfassung
 
@@ -18,7 +18,7 @@
 ### 1) Reale Welt anzeigen
 Es soll zunächst möglich sein, mit dem HMD die reale Welt zu sehen, die von dem Smartphone aufgenommen wurde. 
 
-### 2) Virtuelle Objecte anzeigen
+### 2) Virtuelle Objekte anzeigen
 Mit Hilfe von Vuforia-Markers sollen virtuelle Objekte in die reale Welt angezeigt werden. Dazu soll die App die Marker erkennen und das entsprechende virtuelle Objekt über dem Marker kreieren. Sobald der Marker nicht mehr im Blickfeld der Kamera ist, verschwindet das Objekt wieder.
 
 ### 3) Handgesten Interaktionen
