@@ -1,5 +1,5 @@
 # AR Decorator
-![Example inspired by IKEA's PLACE app](https://bitbucket.org/repo/9pgMjga/images/1531028719-ikea_exp.jpg)
+![Example inspired by IKEA's PLACE app](https://user-images.githubusercontent.com/33485290/32548812-4be056de-c487-11e7-9a4c-17fb70320ded.jpg)
 ----
 ## Zusammenfassung
 
