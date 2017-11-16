@@ -65,4 +65,6 @@ Andere Interaktionen mit den virtuellen Objekten sollten auch möglch sein, z.B.
 
 * AR development example for Android and iOS devices ([link](https://programminghistorian.org/lessons/intro-to-augmented-reality-with-unity))
 
+* Adding Leap Hover UI elements ([link](https://github.com/aestheticinteractive/Hover-UI-Kit))
+
 
