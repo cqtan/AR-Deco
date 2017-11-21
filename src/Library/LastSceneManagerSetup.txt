@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/MyScenes/Vu2Cameras.unity
+- path: Assets/ArJungAssets/Scenes/VuLeapTest1.unity
   isLoaded: 1
   isActive: 1
