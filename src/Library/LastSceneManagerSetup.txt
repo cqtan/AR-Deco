@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/ArJungAssets/Scenes/VuLeapTest1.unity
+- path: Assets/ArJungAssets/Scenes/ArJung_v01.unity
   isLoaded: 1
   isActive: 1
