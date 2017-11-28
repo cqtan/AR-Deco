@@ -8,11 +8,11 @@ using Coloreality.LeapWrapper;
 public class ArGestureManager : MonoBehaviour
 {
   ColorealityManager cManager;
-  [SerializeField] private float leftGrabStrength;
-  [SerializeField] private float rightGrabStrength;
-  [SerializeField] private float leftGrabAngle;
-  [SerializeField] private float rightGrabAngle;
-  [SerializeField] private int handCount;
+  public float LeftGrabStrength { get; private set; }
+  public float RightGrabStrength { get; private set; }
+  public float LeftGrabAngle { get; private set; }
+  public float RightGrabAngle { get; private set; }
+  public int HandCount { get; private set; }
 
   private List<LeapHand> hands;
 
@@ -31,18 +31,18 @@ public class ArGestureManager : MonoBehaviour
     if (cManager.Leap.Data != null)
     {
       List<LeapHand> hands = cManager.Leap.Data.frame.Hands;
-      handCount = hands.Count;
+      HandCount = hands.Count;
       GetGrabValues(hands);
     }
   }
 
   private void ResetAllValues()
   {
-    leftGrabAngle = 0.0f;
-    leftGrabStrength = 0.0f;
-    rightGrabAngle = 0.0f;
-    rightGrabStrength = 0.0f;
-    handCount = 0;
+    LeftGrabAngle = 0.0f;
+    LeftGrabStrength = 0.0f;
+    RightGrabAngle = 0.0f;
+    RightGrabStrength = 0.0f;
+    HandCount = 0;
   }
 
   private void GetHands()
@@ -57,37 +57,37 @@ public class ArGestureManager : MonoBehaviour
   /// <param name="hands">The hand object created by Leap</param>
   private void GetGrabValues(List<LeapHand> hands)
   {
-    if (hands.Count == 0)
+    if (HandCount == 0)
     {
-      leftGrabAngle = 0.0f;
-      leftGrabStrength = 0.0f;
-      rightGrabAngle = 0.0f;
-      rightGrabStrength = 0.0f;
+      LeftGrabAngle = 0.0f;
+      LeftGrabStrength = 0.0f;
+      RightGrabAngle = 0.0f;
+      RightGrabStrength = 0.0f;
     }
 
     foreach (LeapHand hand in hands)
     {
       if (hand.IsLeft)
       {
-        leftGrabStrength = hand.GrabStrength;
-        leftGrabAngle = hand.GrabAngle;
+        LeftGrabStrength = hand.GrabStrength;
+        LeftGrabAngle = hand.GrabAngle;
         
-        if (hands.Count == 1)
+        if (HandCount == 1)
         {
-          rightGrabAngle = 0.0f;
-          rightGrabStrength = 0.0f;
+          RightGrabAngle = 0.0f;
+          RightGrabStrength = 0.0f;
         }
       }
 
       if (hand.IsRight)
       {
-        rightGrabStrength = hand.GrabStrength;
-        rightGrabAngle = hand.GrabAngle;
+        RightGrabStrength = hand.GrabStrength;
+        RightGrabAngle = hand.GrabAngle;
 
-        if (hands.Count == 1)
+        if (HandCount == 1)
         {
-          leftGrabAngle = 0.0f;
-          leftGrabStrength = 0.0f;
+          LeftGrabAngle = 0.0f;
+          LeftGrabStrength = 0.0f;
         }
       }
     }
