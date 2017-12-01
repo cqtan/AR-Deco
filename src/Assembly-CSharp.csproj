@@ -51,8 +51,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ArJungAssets\Scripts\ArGestureManager.cs" />
      <Compile Include="Assets\ArJungAssets\Scripts\CameraRenderer.cs" />
+     <Compile Include="Assets\ArJungAssets\Scripts\CamRotate.cs" />
      <Compile Include="Assets\ArJungAssets\Scripts\CamToggle.cs" />
+     <Compile Include="Assets\ArJungAssets\Scripts\CorrectFurnitureRotation.cs" />
+     <Compile Include="Assets\ArJungAssets\Scripts\GrabObject.cs" />
      <Compile Include="Assets\ArJungAssets\Scripts\VuBtnChangeMaterial.cs" />
      <Compile Include="Assets\ArJungAssets\Scripts\VuButtonPressFeedback.cs" />
      <Compile Include="Assets\Coloreality\Demo\Scripts\DemoSwitcher.cs" />
