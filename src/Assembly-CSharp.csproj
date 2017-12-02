@@ -56,7 +56,10 @@
      <Compile Include="Assets\ArJungAssets\Scripts\CamRotate.cs" />
      <Compile Include="Assets\ArJungAssets\Scripts\CamToggle.cs" />
      <Compile Include="Assets\ArJungAssets\Scripts\CorrectFurnitureRotation.cs" />
+     <Compile Include="Assets\ArJungAssets\Scripts\Experimentals\TestScript.cs" />
      <Compile Include="Assets\ArJungAssets\Scripts\GrabObject.cs" />
+     <Compile Include="Assets\ArJungAssets\Scripts\RaycastOutliner.cs" />
+     <Compile Include="Assets\ArJungAssets\Scripts\RotateRayOrigin.cs" />
      <Compile Include="Assets\ArJungAssets\Scripts\VuBtnChangeMaterial.cs" />
      <Compile Include="Assets\ArJungAssets\Scripts\VuButtonPressFeedback.cs" />
      <Compile Include="Assets\Coloreality\Demo\Scripts\DemoSwitcher.cs" />
@@ -93,6 +96,7 @@
      <None Include="Assets\Coloreality\YouCanReadMe.txt" />
      <None Include="Assets\Editor\Vuforia\TargetsetData\VuforiaMars_Object_info.xml" />
      <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Object_OT.xml" />
+     <None Include="Assets\ArJungAssets\Shader\Outline.shader" />
      <None Include="Assets\SampleResources\AugmentationAssets\Shaders\CharacterHelper.cginc" />
      <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
      <None Include="Assets\StreamingAssets\Vuforia\SofaVuButton.xml" />

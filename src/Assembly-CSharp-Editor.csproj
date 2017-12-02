@@ -60,6 +60,7 @@
      <None Include="Assets\Coloreality\YouCanReadMe.txt" />
      <None Include="Assets\Editor\Vuforia\TargetsetData\VuforiaMars_Object_info.xml" />
      <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Object_OT.xml" />
+     <None Include="Assets\ArJungAssets\Shader\Outline.shader" />
      <None Include="Assets\SampleResources\AugmentationAssets\Shaders\CharacterHelper.cginc" />
      <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
      <None Include="Assets\StreamingAssets\Vuforia\SofaVuButton.xml" />

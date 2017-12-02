@@ -187,6 +187,7 @@ a9e1c36c671666e79706791e556d5100 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehav
 3934ca8022d4c1e2d3df62eb846732fb Assembly-CSharp.dll:.MenuAnimator
 f8c9ff80e444ad06cb8a2b031a8c362e Assembly-CSharp.dll:Coloreality.DemoSwitcher
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MenuOptions
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CorrectFurnitureRotation
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ArGestureManager
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -223,6 +224,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 69d7d01d14b2cb1bf7ea22ff94f3abfc Assembly-CSharp.dll:.DefaultSmartTerrainEventHandler
 3d1a980b1d800873c9d2b01141a9cb6c Assembly-CSharp.dll:.CameraRenderer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.BackButton
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CamRotate
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.BackgroundPlaneBehaviour
 342c9a27403d4f1a11164f989d99bd3f Vuforia.UnityExtensions.dll:Vuforia.CloudRecoBehaviour
 9519b45b1fe77ca14bbfebb6a5236e2e Vuforia.UnityExtensions.dll:Vuforia.CylinderTargetBehaviour
@@ -284,5 +286,6 @@ a9e1c36c671666e79706791e556d5100 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehav
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CamRotate
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CorrectFurnitureRotation
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TestScript
+a4d7a9f1842b2b20a59bc6394c82bb13 Assembly-CSharp.dll:.RaycastOutliner
+1ee47048d700dd00b56f643026953707 Assembly-CSharp.dll:.RotateRayOrigin
