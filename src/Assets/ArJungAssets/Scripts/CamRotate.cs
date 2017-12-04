@@ -29,6 +29,6 @@ public class CamRotate : MonoBehaviour
 		}
 		Quaternion cameraRotation = new Quaternion (Input.gyro.attitude.x, Input.gyro.attitude.y, 
 			                            -Input.gyro.attitude.z, -Input.gyro.attitude.w);
-		this.transform.localRotation = cameraRotation;
+        this.transform.rotation = cameraRotation;
 	}
 }

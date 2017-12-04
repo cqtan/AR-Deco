@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RaycastOutliner : MonoBehaviour {
 	[SerializeField] private Transform rayOrigin;
-	[SerializeField] string tagName;
+    [SerializeField] string collidingTagName;
 	[SerializeField] private float min = 1.0f;
 	[SerializeField] private float max = 1.05f;
 
@@ -14,10 +14,11 @@ public class RaycastOutliner : MonoBehaviour {
 	
 	void Update () {
 		RaycastHit hit;
-		Ray ray = new Ray(rayOrigin.position, Vector3.forward);
+        Vector3 forward = rayOrigin.TransformDirection(Vector3.forward);
+		Ray ray = new Ray(rayOrigin.position, forward);
 
 		if (Physics.Raycast(ray, out hit)) {
-			if (hit.collider.gameObject.tag == tagName) {
+			if (hit.collider.gameObject.tag == collidingTagName) {
 				GameObject go = hit.collider.gameObject;
 				StartCoroutine (OutlineLerp (go, max, min, 0.5f));
 				lastGo = go;

@@ -113,6 +113,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DefaultInitializationErrorHandler
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Coloreality.ColorealityManager
+63ae9c1a1a927c6cc022b72aef571503 Assembly-CSharp.dll:.RaycastOutliner
 24ee0ba853276c17501d7bc70bfe26cc Assembly-CSharp.dll:.CamToggle
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LoadingScreen
@@ -221,6 +222,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Coloreality.LeapHandConnect
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 28a737d57aa2f0fadd73594ef9132406 Assembly-CSharp.dll:Coloreality.LeapConfigController
+1ee47048d700dd00b56f643026953707 Assembly-CSharp.dll:.RotateRayOrigin
 69d7d01d14b2cb1bf7ea22ff94f3abfc Assembly-CSharp.dll:.DefaultSmartTerrainEventHandler
 3d1a980b1d800873c9d2b01141a9cb6c Assembly-CSharp.dll:.CameraRenderer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.BackButton
@@ -256,6 +258,7 @@ a9e1c36c671666e79706791e556d5100 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehav
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
 d9cf0041f6f4823d6bfcd31aabd3c1a9 Assembly-CSharp.dll:Coloreality.CameraImageView
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FrameRateSettings
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TestScript
 563daf171b5d1c7c75b1108951401223 Assembly-UnityScript-firstpass.dll:.CharacterMotor
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.BackgroundPlaneBehaviour
 342c9a27403d4f1a11164f989d99bd3f Vuforia.UnityExtensions.dll:Vuforia.CloudRecoBehaviour
@@ -286,6 +289,3 @@ a9e1c36c671666e79706791e556d5100 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehav
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TestScript
-a4d7a9f1842b2b20a59bc6394c82bb13 Assembly-CSharp.dll:.RaycastOutliner
-1ee47048d700dd00b56f643026953707 Assembly-CSharp.dll:.RotateRayOrigin
