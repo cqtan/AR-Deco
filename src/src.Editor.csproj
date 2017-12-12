@@ -338,6 +338,7 @@
     <None Include="Assets\Editor\Vuforia\VuforiaMars_VuMark\authoringinfo.xml" />
     <None Include="Assets\SampleResources\AugmentationAssets\Shaders\Character.shader" />
     <None Include="Assets\SampleResources\AugmentationAssets\Shaders\CharacterHelper.cginc" />
+    <None Include="Assets\StreamingAssets\Vuforia\AR-Jung.xml" />
     <None Include="Assets\StreamingAssets\Vuforia\SofaVuButton.xml" />
     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Images.xml" />
     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Object_OT.xml" />

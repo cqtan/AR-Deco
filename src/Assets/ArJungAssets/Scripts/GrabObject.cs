@@ -6,7 +6,7 @@ public class GrabObject : MonoBehaviour
 {
   [SerializeField] private ArGestureManager gesture;
   [SerializeField] private GameObject parentObj;
-  [SerializeField] private GameObject[] furnitureMarkers;
+ // [SerializeField] private GameObject[] furnitureMarkers;
   [SerializeField] private GameObject[] furnitures;
 
   private bool isTriggered;
@@ -35,9 +35,10 @@ public class GrabObject : MonoBehaviour
               go = Instantiate(furnitures[i], parentObj.transform);
               Debug.Log("Furniture CREATED!");
             }
-          }
+          } 
           else if (other.gameObject.name.Substring(0, other.gameObject.name.Length - 7) == furnitures[i].name)
           {
+            // For grabbing objects that are already placed in the scene, e.g. "(clone)sofa".            
             go = other.gameObject;
             Debug.Log("Furniture found!");
           }
