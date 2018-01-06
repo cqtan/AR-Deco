@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{7C30CA80-AAF2-6895-C66E-ABBB6F8A6825}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Assembly-CSharp.dll</AssemblyName>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
@@ -262,15 +262,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ArJungAssets\Scripts\_Experimentals\CameraRenderer.cs" />
+    <Compile Include="Assets\ArJungAssets\Scripts\_Experimentals\CamToggle.cs" />
+    <Compile Include="Assets\ArJungAssets\Scripts\_Experimentals\RotateRayOrigin.cs" />
+    <Compile Include="Assets\ArJungAssets\Scripts\_Experimentals\TestScript.cs" />
     <Compile Include="Assets\ArJungAssets\Scripts\ArGestureManager.cs" />
-    <Compile Include="Assets\ArJungAssets\Scripts\CameraRenderer.cs" />
     <Compile Include="Assets\ArJungAssets\Scripts\CamRotate.cs" />
-    <Compile Include="Assets\ArJungAssets\Scripts\CamToggle.cs" />
     <Compile Include="Assets\ArJungAssets\Scripts\CorrectFurnitureRotation.cs" />
-    <Compile Include="Assets\ArJungAssets\Scripts\Experimentals\TestScript.cs" />
     <Compile Include="Assets\ArJungAssets\Scripts\GrabObject.cs" />
     <Compile Include="Assets\ArJungAssets\Scripts\RaycastOutliner.cs" />
-    <Compile Include="Assets\ArJungAssets\Scripts\RotateRayOrigin.cs" />
     <Compile Include="Assets\ArJungAssets\Scripts\VuBtnChangeMaterial.cs" />
     <Compile Include="Assets\ArJungAssets\Scripts\VuButtonPressFeedback.cs" />
     <Compile Include="Assets\Coloreality\Demo\Scripts\DemoSwitcher.cs" />
