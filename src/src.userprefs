@@ -1,12 +1,14 @@
 ﻿<Properties StartupConfiguration="{7C30CA80-AAF2-6895-C66E-ABBB6F8A6825}|">
   <MonoDevelop.Ide.ItemProperties.src PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ArJungAssets/Scripts/VuButtonPressFeedback.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ArJungAssets/Scripts/GrabOutlined.cs">
     <Files>
-      <File FileName="Assets/ArJungAssets/Scripts/RaycastOutliner.cs" Line="17" Column="48" />
-      <File FileName="Assets/ArJungAssets/Scripts/ArGestureManager.cs" Line="53" Column="7" />
-      <File FileName="Assets/ArJungAssets/Scripts/GrabObject.cs" Line="45" Column="68" />
-      <File FileName="Assets/ArJungAssets/Scripts/VuButtonPressFeedback.cs" Line="1" Column="1" />
+      <File FileName="Assets/ArJungAssets/Scripts/RaycastOutliner.cs" Line="9" Column="21" />
+      <File FileName="Assets/ArJungAssets/Scripts/ArGestureManager.cs" Line="87" Column="1" />
+      <File FileName="Assets/ArJungAssets/Scripts/GrabObject.cs" Line="38" Column="80" />
+      <File FileName="Assets/ArJungAssets/Scripts/OutlineWithRay.cs" Line="13" Column="43" />
+      <File FileName="Assets/ArJungAssets/Scripts/GrabOutlined.cs" Line="21" Column="6" />
+      <File FileName="Assets/ArJungAssets/Scripts/_Experimentals/TestScript.cs" Line="20" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

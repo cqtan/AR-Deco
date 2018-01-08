@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/ArJungAssets/Scenes/ArJung_v1_0_2.unity
+- path: Assets/ArJungAssets/Scenes/ArJung_v1_1_0.unity
   isLoaded: 1
   isActive: 1

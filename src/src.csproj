@@ -270,6 +270,8 @@
     <Compile Include="Assets\ArJungAssets\Scripts\CamRotate.cs" />
     <Compile Include="Assets\ArJungAssets\Scripts\CorrectFurnitureRotation.cs" />
     <Compile Include="Assets\ArJungAssets\Scripts\GrabObject.cs" />
+    <Compile Include="Assets\ArJungAssets\Scripts\GrabOutlined.cs" />
+    <Compile Include="Assets\ArJungAssets\Scripts\OutlineWithRay.cs" />
     <Compile Include="Assets\ArJungAssets\Scripts\RaycastOutliner.cs" />
     <Compile Include="Assets\ArJungAssets\Scripts\VuBtnChangeMaterial.cs" />
     <Compile Include="Assets\ArJungAssets\Scripts\VuButtonPressFeedback.cs" />
