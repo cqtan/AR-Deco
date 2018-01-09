@@ -6,14 +6,15 @@ public class GrabOutlined : MonoBehaviour {
   [SerializeField] private ArGestureManager gesture;
   [SerializeField] private OutlineWithRay outliner;
   [SerializeField] private GameObject parentObject;
-  [SerializeField] private GameObject[] furnitures;
 
   private GameObject grabbedObject;
   private Collider collisionObject;
   private GameObject grabPoint;
+  private GameObject[] targetables;
 
 	void Start () {
-		
+    if (outliner != null)
+      targetables = outliner.GetTargetables();
 	}
 	
 	void Update () {
@@ -28,8 +29,8 @@ public class GrabOutlined : MonoBehaviour {
 	}
 
   private void GrabObject() {
-    //if (gesture.RightGrabStrength > 0.9f) {
-    if (Input.GetKey(KeyCode.G)) {
+    if (gesture.RightGrabStrength > 0.9f || gesture.LeftGrabStrength > 0.9f) {
+    //if (Input.GetKey(KeyCode.G)) {
       if (grabbedObject == null) {
         GetGrabbedObject();
         SetGrabPoint();
@@ -54,13 +55,13 @@ public class GrabOutlined : MonoBehaviour {
   }
 
   private void GetGrabbedObject() {
-    for (int i = 0; i < furnitures.Length; i++) {
+    for (int i = 0; i < targetables.Length; i++) {
       if (IsVuMarker(collisionObject) == true) {
-        if (CheckFurnitureExists(collisionObject, furnitures[i].name)) {
-          grabbedObject = Instantiate(furnitures[i], parentObject.transform);
+        if (CheckFurnitureExists(collisionObject, targetables[i].name)) {
+          grabbedObject = Instantiate(targetables[i], parentObject.transform);
           Debug.Log("Furniture CREATED!");
         }
-      } else if (CheckCloneExists(collisionObject, furnitures[i].name)) {
+      } else if (CheckCloneExists(collisionObject, targetables[i].name)) {
         grabbedObject = collisionObject.gameObject;
         Debug.Log("Furniture found!");
       }
@@ -71,7 +72,7 @@ public class GrabOutlined : MonoBehaviour {
     if (grabPoint == null)
       grabPoint = new GameObject("GrabPoint");
     grabPoint.transform.parent = this.transform.parent;
-    grabPoint.transform.position = outliner.GetRayHit().point;
+    grabPoint.transform.position = outliner.GetRayHit().collider.transform.position;
   }
 
   private void UpdateObjectPosition(GameObject go) {

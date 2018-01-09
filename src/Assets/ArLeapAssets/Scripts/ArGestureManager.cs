@@ -15,7 +15,14 @@ public class ArGestureManager : MonoBehaviour {
   public float RightGrabStrength { get; private set; }
   public float LeftGrabAngle { get; private set; }
   public float RightGrabAngle { get; private set; }
+  public bool LeftIndexPinch { get; private set; }
+  public bool RightIndexPinch { get; private set; }
   public int HandCount { get; private set; }
+
+  [SerializeField] private GameObject LeftThumb;
+  [SerializeField] private GameObject LeftIndex;
+  [SerializeField] private GameObject RightThumb;
+  [SerializeField] private GameObject RightIndex;
 
   private List<LeapHand> hands;
 
@@ -29,9 +36,14 @@ public class ArGestureManager : MonoBehaviour {
 
   void Update() {
     if (cManager.Leap.Data != null) {
-      List<LeapHand> hands = cManager.Leap.Data.frame.Hands;
+      hands = cManager.Leap.Data.frame.Hands;
       HandCount = hands.Count;
-      GetGrabValues(hands);
+      if (HandCount > 0) {
+        GetGrabValues(hands);
+        CheckPinching(hands);
+      } else {
+        ResetAllValues();
+      }
     }
   }
 
@@ -40,11 +52,8 @@ public class ArGestureManager : MonoBehaviour {
     LeftGrabStrength = 0.0f;
     RightGrabAngle = 0.0f;
     RightGrabStrength = 0.0f;
-    HandCount = 0;
-  }
-
-  private void GetHands() {
-
+    LeftIndexPinch = false;
+    RightIndexPinch = false;
   }
 
   /// <summary>
@@ -54,13 +63,6 @@ public class ArGestureManager : MonoBehaviour {
   /// </summary>
   /// <param name="hands">The hand object created by Leap</param>
   private void GetGrabValues(List<LeapHand> hands) {
-    if (HandCount == 0) {
-      LeftGrabAngle = 0.0f;
-      LeftGrabStrength = 0.0f;
-      RightGrabAngle = 0.0f;
-      RightGrabStrength = 0.0f;
-    }
-
     foreach (LeapHand hand in hands) {
       if (hand.IsLeft) {
         LeftGrabStrength = hand.GrabStrength;
@@ -83,4 +85,28 @@ public class ArGestureManager : MonoBehaviour {
       }
     }
   }
+
+  /// <summary>
+  /// Checks if either hand is performing a pinch with the index finger.
+  /// </summary>
+  /// <param name="hands">Array of hands detected by the Leap.</param>
+  private void CheckPinching(List<LeapHand> hands) {
+    foreach (LeapHand hand in hands) {
+      if (hand.IsLeft && LeftGrabAngle < 1.8f) {
+        Vector3 thumbPos = LeftThumb.transform.position;
+        Vector3 indexPos = LeftIndex.transform.position;
+        float distance = Vector3.Distance(thumbPos, indexPos);
+        LeftIndexPinch = distance < 0.02f ? true : false;
+      } 
+
+      if (hand.IsRight && RightGrabAngle < 1.8f) {
+        Vector3 thumbPos = RightThumb.transform.position;
+        Vector3 indexPos = RightIndex.transform.position;
+        float distance = Vector3.Distance(thumbPos, indexPos);
+        RightIndexPinch = distance < 0.02f ? true : false;
+      }
+    }
+  }
+
+
 }

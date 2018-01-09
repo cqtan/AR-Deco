@@ -255,7 +255,7 @@
     <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\ArJungAssets\Shader\Outline.shader" />
+    <None Include="Assets\ArLeapAssets\Shader\Outline.shader" />
     <None Include="Assets\Coloreality\License.txt" />
     <None Include="Assets\Coloreality\YouCanReadMe.txt" />
     <None Include="Assets\Editor\Vuforia\CylinderTargetTextures\VuforiaMars_Images\authoringinfo.xml" />

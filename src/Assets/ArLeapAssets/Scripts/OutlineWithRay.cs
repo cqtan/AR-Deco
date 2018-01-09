@@ -10,11 +10,13 @@ public class OutlineWithRay : MonoBehaviour {
   public bool HasCollided { get; private set; }
   public LineRenderer Line { get; set; }
 
-  [SerializeField] private bool enableLine;
+  [SerializeField] private bool lineIsVisible;
+  [SerializeField] private bool rayIsBackwards;
   [SerializeField] private Material MaterialOnHit;
   [SerializeField] private Material MaterialOnNoHit;
   [SerializeField] private Transform rayOrigin;
-  [SerializeField] string collidingTagName;
+  [SerializeField] string targetableTagName;
+  [SerializeField] private GameObject[] targetables;
   [SerializeField] private float min = 1.0f;
   [SerializeField] private float max = 1.05f;
 
@@ -46,6 +48,8 @@ public class OutlineWithRay : MonoBehaviour {
   /// </summary>
   private bool RayIsColliding() {
     Vector3 forward = rayOrigin.TransformDirection((Vector3.forward));
+    if (rayIsBackwards)
+      forward *= -1;
     Ray ray = new Ray(rayOrigin.position, forward);
 
     return Physics.Raycast(ray, out hit);
@@ -55,7 +59,7 @@ public class OutlineWithRay : MonoBehaviour {
   /// Increases and decreases outline of collision object with the ray. 
   /// </summary>
   private void ManageOutline() {
-    if (hit.collider.gameObject.tag == collidingTagName) {
+    if (hit.collider.gameObject.tag == targetableTagName) {
       GameObject go = hit.collider.gameObject;
       StartCoroutine(OutlineLerp(go, max, min, 0.5f));
       previousGo = go;
@@ -78,31 +82,38 @@ public class OutlineWithRay : MonoBehaviour {
   }
 
   private void createLine() {
-    Line = this.gameObject.AddComponent<LineRenderer>();
-    Line.material = MaterialOnNoHit;
-    Line.sortingLayerName = "OnTop";
-    Line.sortingOrder = 5;
-    Line.SetVertexCount(2);
-    Line.SetPosition(0, this.transform.position);
-    Line.SetPosition(1, this.transform.forward * 10);
-    Line.startWidth = 0.05f;
-    Line.endWidth = 0.05f;
-    Line.useWorldSpace = true;
-  }
-
-  private void UpdateLine() {
-    Line.SetPosition(0, this.transform.position);
-
-    if (HasCollided) {
-      Line.SetPosition(1, hit.point);
-      Line.material = MaterialOnHit;
-    } else {
-      Line.SetPosition(1, this.transform.forward * 10 + transform.position);
+    if (lineIsVisible) {
+      Line = rayOrigin.gameObject.GetComponent<LineRenderer>() == null ? 
+             rayOrigin.gameObject.AddComponent<LineRenderer>() : 
+             rayOrigin.gameObject.GetComponent<LineRenderer>();
       Line.material = MaterialOnNoHit;
+      Line.sortingLayerName = "OnTop";
+      Line.sortingOrder = 5;
+      Line.SetVertexCount(2);
+      Line.SetPosition(0, rayOrigin.transform.position);
+      Line.SetPosition(1, rayOrigin.transform.forward * 10);
+      Line.startWidth = 0.05f;
+      Line.endWidth = 0.05f;
+      Line.useWorldSpace = true;
     }
   }
 
+  private void UpdateLine() {
+    if (lineIsVisible) {
+      Line.SetPosition(0, rayOrigin.transform.position);
 
-  public RaycastHit GetRayHit() { return hit; } 
+      if (HasCollided) {
+        Line.SetPosition(1, hit.point);
+        Line.material = MaterialOnHit;
+      } else {
+        Line.SetPosition(1, rayOrigin.transform.forward * 10 + transform.position);
+        Line.material = MaterialOnNoHit;
+      }
+    }
+  }
+
+  public RaycastHit GetRayHit() { return hit; }
+
+  public GameObject[] GetTargetables() { return targetables; }
 
 }

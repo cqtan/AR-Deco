@@ -185,6 +185,7 @@ a9e1c36c671666e79706791e556d5100 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehav
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
 2209f0b22cdf6745441c93436a753a21 Assembly-CSharp.dll:Coloreality.LeapHandFollow
 05524b8f659e7bfe5756d1335fec24ba Assembly-UnityScript-firstpass.dll:.FPSInputController
+9cb2f711b787283c588e3610146896a9 Assembly-CSharp.dll:.GrabOutlined
 3934ca8022d4c1e2d3df62eb846732fb Assembly-CSharp.dll:.MenuAnimator
 f8c9ff80e444ad06cb8a2b031a8c362e Assembly-CSharp.dll:Coloreality.DemoSwitcher
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MenuOptions
@@ -227,6 +228,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 3d1a980b1d800873c9d2b01141a9cb6c Assembly-CSharp.dll:.CameraRenderer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.BackButton
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CamRotate
+a61711d197b838d9f1ac923e8675db2a Assembly-CSharp.dll:.OutlineWithRay
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.BackgroundPlaneBehaviour
 342c9a27403d4f1a11164f989d99bd3f Vuforia.UnityExtensions.dll:Vuforia.CloudRecoBehaviour
 9519b45b1fe77ca14bbfebb6a5236e2e Vuforia.UnityExtensions.dll:Vuforia.CylinderTargetBehaviour

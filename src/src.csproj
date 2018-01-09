@@ -262,19 +262,20 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ArJungAssets\Scripts\_Experimentals\CameraRenderer.cs" />
-    <Compile Include="Assets\ArJungAssets\Scripts\_Experimentals\CamToggle.cs" />
-    <Compile Include="Assets\ArJungAssets\Scripts\_Experimentals\RotateRayOrigin.cs" />
-    <Compile Include="Assets\ArJungAssets\Scripts\_Experimentals\TestScript.cs" />
-    <Compile Include="Assets\ArJungAssets\Scripts\ArGestureManager.cs" />
-    <Compile Include="Assets\ArJungAssets\Scripts\CamRotate.cs" />
-    <Compile Include="Assets\ArJungAssets\Scripts\CorrectFurnitureRotation.cs" />
-    <Compile Include="Assets\ArJungAssets\Scripts\GrabObject.cs" />
-    <Compile Include="Assets\ArJungAssets\Scripts\GrabOutlined.cs" />
-    <Compile Include="Assets\ArJungAssets\Scripts\OutlineWithRay.cs" />
-    <Compile Include="Assets\ArJungAssets\Scripts\RaycastOutliner.cs" />
-    <Compile Include="Assets\ArJungAssets\Scripts\VuBtnChangeMaterial.cs" />
-    <Compile Include="Assets\ArJungAssets\Scripts\VuButtonPressFeedback.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\_Experimentals\CameraRenderer.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\_Experimentals\CamToggle.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\_Experimentals\RotateRayOrigin.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\_Experimentals\TestScript.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\ArGestureManager.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\CamRotate.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\CorrectFurnitureRotation.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\GrabObject.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\GrabOutlined.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\OutlineWithRay.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\PinchDistance.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\RaycastOutliner.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\VuBtnChangeMaterial.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\VuButtonPressFeedback.cs" />
     <Compile Include="Assets\Coloreality\Demo\Scripts\DemoSwitcher.cs" />
     <Compile Include="Assets\Coloreality\Demo\Scripts\LeapHandConnect.cs" />
     <Compile Include="Assets\Coloreality\Demo\Scripts\LeapHandFollow.cs" />
@@ -304,7 +305,7 @@
     <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\ArJungAssets\Shader\Outline.shader" />
+    <None Include="Assets\ArLeapAssets\Shader\Outline.shader" />
     <None Include="Assets\Coloreality\License.txt" />
     <None Include="Assets\Coloreality\YouCanReadMe.txt" />
     <None Include="Assets\Editor\Vuforia\CylinderTargetTextures\VuforiaMars_Images\authoringinfo.xml" />

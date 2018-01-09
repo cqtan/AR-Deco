@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65752375850833570}
   - component: {fileID: 54983083263450076}
   m_Layer: 0
-  m_Name: Cabinet
+  m_Name: Cabinet(old)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
