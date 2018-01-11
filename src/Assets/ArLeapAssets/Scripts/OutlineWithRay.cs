@@ -63,7 +63,7 @@ public class OutlineWithRay : MonoBehaviour {
       GameObject go = hit.collider.gameObject;
       StartCoroutine(OutlineLerp(go, max, min, 0.5f));
       previousGo = go;
-    } else {
+    } else if (previousGo != null) {
       if (previousGo.GetComponent<MeshRenderer>().material.GetFloat("_OutlineWidth") == max) {
         StartCoroutine(OutlineLerp(previousGo, max, min, 0.5f));
         previousGo = null;

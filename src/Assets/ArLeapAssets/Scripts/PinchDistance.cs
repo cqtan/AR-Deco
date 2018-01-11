@@ -6,18 +6,16 @@ using UnityEngine;
 public class PinchDistance : MonoBehaviour {
   [SerializeField] private ArGestureManager gesture;
   [SerializeField] private OutlineWithRay outliner;
+  [SerializeField] private float distanceModifier;
 
   private GameObject grabbedObject;
+  private float distanceDifference;
 
-	void Start () {
-		
-  }
+	void Start () {}
 	
 	void Update () {
     if (SearchGrabbedObject()) {
-      if (AppropriateGestures()) {
-        ManageDistance();
-      }
+      ManageDistance();
     }
 	}
 
@@ -39,7 +37,8 @@ public class PinchDistance : MonoBehaviour {
   }
 
   private void ManageDistance() {
-    
+    distanceDifference = gesture.CalculateHandDistance(AppropriateGestures(), distanceModifier);
+    grabbedObject.transform.position = new Vector3(0f, distanceDifference, 0f);
   }
 
 }
