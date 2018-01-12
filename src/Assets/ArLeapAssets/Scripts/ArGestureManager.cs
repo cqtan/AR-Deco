@@ -10,8 +10,7 @@ using Coloreality.LeapWrapper;
 /// data about leap motion.
 /// </summary>
 public class ArGestureManager : MonoBehaviour {
-  public float LogHandDistance;
-
+  
   ColorealityManager cManager;
   public float LeftGrabStrength { get; private set; }
   public float RightGrabStrength { get; private set; }
@@ -21,16 +20,12 @@ public class ArGestureManager : MonoBehaviour {
   public bool RightIndexPinch { get; private set; }
   public int HandCount { get; private set; }
 
-  [SerializeField] private Transform leftPalm;
-  [SerializeField] private Transform rightPalm;
   [SerializeField] private GameObject leftThumb;
   [SerializeField] private GameObject leftIndex;
   [SerializeField] private GameObject rightThumb;
   [SerializeField] private GameObject rightIndex;
 
   private List<LeapHand> hands;
-  private float currentDistance;
-  private float lastDistance;
 
   void Start() {
     cManager = ColorealityManager.Instance;
@@ -114,28 +109,6 @@ public class ArGestureManager : MonoBehaviour {
     }
   }
 
-  public float CalculateHandDistance(bool appropriateGesture, float distanceModifier) {
-    float distanceDifference = 0f;
-    if (appropriateGesture) {
-      float distance, distanceScaled;
 
-      distance = Vector3.Distance(leftPalm.position, rightPalm.position);
-      distanceScaled = (distance * distanceModifier);
-      currentDistance = distanceScaled;
-
-      // prevent value jumping
-      if (lastDistance == 0.0f)
-        lastDistance = currentDistance;
-
-      distanceDifference = (currentDistance - lastDistance);
-      lastDistance = currentDistance;
-
-      LogHandDistance = distanceDifference;
-      return distanceDifference;
-    } else {
-      lastDistance = 0.0f;
-      return 0f;
-    }
-  }
 
 }

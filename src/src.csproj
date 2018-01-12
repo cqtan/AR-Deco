@@ -271,6 +271,8 @@
     <Compile Include="Assets\ArLeapAssets\Scripts\CorrectFurnitureRotation.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\GrabObject.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\GrabOutlined.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\HandDistance.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\IGestureFeature.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\OutlineWithRay.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\PinchDistance.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\RaycastOutliner.cs" />

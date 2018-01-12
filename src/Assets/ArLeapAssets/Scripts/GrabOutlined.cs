@@ -2,7 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrabOutlined : MonoBehaviour {
+/// <summary>
+/// Objects that were targeted by the user with the 'OutlineWithRay' class can 
+/// be repositioned around the user with a single handed grab gesture. If the
+/// target comes from a VuMarker, then a prefab of that object is instanciated 
+/// and grabbed. If it was already instanciated, then that object is grabbed.
+/// </summary>
+public class GrabOutlined : MonoBehaviour, IGestureFeature {
   [SerializeField] private ArGestureManager gesture;
   [SerializeField] private OutlineWithRay outliner;
   [SerializeField] private GameObject parentObject;
@@ -29,7 +35,7 @@ public class GrabOutlined : MonoBehaviour {
 	}
 
   private void GrabObject() {
-    if (gesture.RightGrabStrength > 0.9f || gesture.LeftGrabStrength > 0.9f) {
+    if (AppropriateGesture()) {
     //if (Input.GetKey(KeyCode.G)) {
       if (grabbedObject == null) {
         GetGrabbedObject();
@@ -40,6 +46,9 @@ public class GrabOutlined : MonoBehaviour {
     }
   }
 
+  /// <summary>
+  /// For debugging without Leap Motion
+  /// </summary>
   private void MoveArrow() {
     if (Input.GetKeyDown(KeyCode.LeftArrow)) {
       Vector3 position = this.transform.position;
@@ -54,6 +63,18 @@ public class GrabOutlined : MonoBehaviour {
     }
   }
 
+  public bool AppropriateGesture() {
+    if (gesture.RightGrabStrength > 0.9f && !(gesture.LeftGrabStrength > 0.9f) ||
+        gesture.LeftGrabStrength > 0.9f && !(gesture.RightGrabStrength > 0.9f)) {
+      return true;
+    } else
+      return false;
+  }
+
+  /// <summary>
+  /// Checks whether the target is needs to be instanciated (VuMarker) or 
+  /// not (instanciated object).
+  /// </summary>
   private void GetGrabbedObject() {
     for (int i = 0; i < targetables.Length; i++) {
       if (IsVuMarker(collisionObject) == true) {
@@ -68,6 +89,12 @@ public class GrabOutlined : MonoBehaviour {
     }
   }
 
+  /// <summary>
+  /// To help in positioning the object, a 'GrabPoint' is instanciated to anchor
+  /// the grabbed targets position to it. GrabPoint's parent on the other hand is
+  /// then anchored to the camera itself, meaning that the grabbed object moves
+  /// in relation to the user's head motion while performing the gesture.
+  /// </summary>
   private void SetGrabPoint() {
     if (grabPoint == null)
       grabPoint = new GameObject("GrabPoint");
@@ -78,7 +105,6 @@ public class GrabOutlined : MonoBehaviour {
   private void UpdateObjectPosition(GameObject go) {
     go.transform.position = grabPoint.transform.position;
   }
-
 
   /// <summary>
   /// Checks if the VuMarker Furniture is in the list of predefined furnitures.
@@ -96,7 +122,6 @@ public class GrabOutlined : MonoBehaviour {
     return (clone == furnitureName) ? true : false;
   }
 
-
   /// <summary>
   /// Returns true if the collided object <paramref name="col"/> comes from the VuMarker.
   /// </summary>
@@ -107,5 +132,4 @@ public class GrabOutlined : MonoBehaviour {
     if (name.IndexOf("Vu") > -1) return true;
     else return false;
   }
-
 }
