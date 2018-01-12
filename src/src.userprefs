@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{7C30CA80-AAF2-6895-C66E-ABBB6F8A6825}|">
   <MonoDevelop.Ide.ItemProperties.src PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ArLeapAssets/Scripts/OutlineWithRay.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ArLeapAssets/Scripts/ArGestureManager.cs">
     <Files>
-      <File FileName="Assets/ArLeapAssets/Scripts/ArGestureManager.cs" Line="92" Column="6" />
-      <File FileName="Assets/ArLeapAssets/Scripts/GrabOutlined.cs" Line="58" Column="43" />
+      <File FileName="Assets/ArLeapAssets/Scripts/ArGestureManager.cs" Line="139" Column="4" />
+      <File FileName="Assets/ArLeapAssets/Scripts/GrabOutlined.cs" Line="13" Column="31" />
       <File FileName="Assets/ArLeapAssets/Scripts/PinchDistance.cs" Line="41" Column="80" />
-      <File FileName="Assets/ArLeapAssets/Scripts/OutlineWithRay.cs" Line="67" Column="1" />
+      <File FileName="Assets/ArLeapAssets/Scripts/OutlineWithRay.cs" Line="66" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

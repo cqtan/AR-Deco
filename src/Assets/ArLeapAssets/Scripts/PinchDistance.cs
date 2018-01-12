@@ -38,7 +38,7 @@ public class PinchDistance : MonoBehaviour {
 
   private void ManageDistance() {
     distanceDifference = gesture.CalculateHandDistance(AppropriateGestures(), distanceModifier);
-    grabbedObject.transform.position = new Vector3(0f, distanceDifference, 0f);
+    grabbedObject.transform.position += new Vector3(0f, distanceDifference, 0f);
   }
 
 }
