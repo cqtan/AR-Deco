@@ -1,13 +1,16 @@
 ﻿<Properties StartupConfiguration="{7C30CA80-AAF2-6895-C66E-ABBB6F8A6825}|">
   <MonoDevelop.Ide.ItemProperties.src PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ArLeapAssets/Scripts/OutlineWithRay.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ArLeapAssets/Scripts/HandRotation.cs">
     <Files>
-      <File FileName="Assets/ArLeapAssets/Scripts/ArGestureManager.cs" Line="26" Column="50" />
-      <File FileName="Assets/ArLeapAssets/Scripts/GrabOutlined.cs" Line="30" Column="51" />
-      <File FileName="Assets/ArLeapAssets/Scripts/PinchDistance.cs" Line="61" Column="34" />
-      <File FileName="Assets/ArLeapAssets/Scripts/OutlineWithRay.cs" Line="39" Column="6" />
-      <File FileName="Assets/ArLeapAssets/Scripts/HandDistance.cs" Line="33" Column="40" />
+      <File FileName="Assets/ArLeapAssets/Scripts/ArGestureManager.cs" Line="86" Column="8" />
+      <File FileName="Assets/ArLeapAssets/Scripts/GrabOutlined.cs" Line="32" Column="6" />
+      <File FileName="Assets/ArLeapAssets/Scripts/OutlineWithRay.cs" Line="54" Column="5" />
+      <File FileName="Assets/ArLeapAssets/Scripts/HandDistance.cs" Line="8" Column="1" />
+      <File FileName="Assets/ArLeapAssets/Scripts/PinchDistance.cs" Line="26" Column="62" />
+      <File FileName="Assets/ArLeapAssets/Scripts/PinchRotation.cs" Line="22" Column="3" />
+      <File FileName="Assets/ArLeapAssets/Scripts/Emulator.cs" Line="70" Column="41" />
+      <File FileName="Assets/ArLeapAssets/Scripts/HandRotation.cs" Line="10" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

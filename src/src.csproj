@@ -269,12 +269,15 @@
     <Compile Include="Assets\ArLeapAssets\Scripts\ArGestureManager.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\CamRotate.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\CorrectFurnitureRotation.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\Emulator.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\GrabObject.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\GrabOutlined.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\HandDistance.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\HandRotation.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\IGestureFeature.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\OutlineWithRay.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\PinchDistance.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\PinchRotation.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\RaycastOutliner.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\VuBtnChangeMaterial.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\VuButtonPressFeedback.cs" />

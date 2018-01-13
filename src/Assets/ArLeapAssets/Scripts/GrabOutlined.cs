@@ -24,8 +24,6 @@ public class GrabOutlined : MonoBehaviour, IGestureFeature {
 	}
 	
 	void Update () {
-    MoveArrow();
-
     if (outliner.HasCollided) {
       collisionObject = outliner.GetRayHit().collider;
       GrabObject();
@@ -36,30 +34,12 @@ public class GrabOutlined : MonoBehaviour, IGestureFeature {
 
   private void GrabObject() {
     if (AppropriateGesture()) {
-    //if (Input.GetKey(KeyCode.G)) {
       if (grabbedObject == null) {
         GetGrabbedObject();
         SetGrabPoint();
       } else {
         UpdateObjectPosition(grabbedObject);
       }
-    }
-  }
-
-  /// <summary>
-  /// For debugging without Leap Motion
-  /// </summary>
-  private void MoveArrow() {
-    if (Input.GetKeyDown(KeyCode.LeftArrow)) {
-      Vector3 position = this.transform.position;
-      position.x--;
-      this.transform.position = position;
-    }
-
-    if (Input.GetKeyDown(KeyCode.RightArrow)) {
-      Vector3 position = this.transform.position;
-      position.x++;
-      this.transform.position = position;
     }
   }
 
