@@ -11,24 +11,24 @@ public class HandRotation : MonoBehaviour {
 
 	void Start () {}
 	
-	void Update () {}
+	void Update () {
+    //Debug.Log("Euler: " + leftPalm.rotation.eulerAngles);
+  }
 
   public Vector3 CalculateRotation(bool appropriateGesture) {
-    Vector3 rotationDfference = new Vector3(0f, 0f, 0f);
-    if (appropriateGesture) {
-
-      currentRotation = leftPalm.transform.eulerAngles;
-
-      if (lastRotation == new Vector3(0, 0, 0))
+    Vector3 rotationDifference = Vector3.zero;
+    //if (appropriateGesture) {
+    if (Input.GetKey(KeyCode.Y)) {
+      currentRotation = leftPalm.eulerAngles;
+      if (lastRotation == Vector3.zero)
         lastRotation = currentRotation;
-
-      rotationDfference = (currentRotation - lastRotation);
+      rotationDifference = (currentRotation - lastRotation);
       lastRotation = currentRotation;
-      logRotationDifference = rotationDfference;
-      return rotationDfference;
+      logRotationDifference = rotationDifference;
+      return rotationDifference;
     } else {
-      lastRotation = new Vector3(0, 0, 0);
-      return new Vector3(0, 0, 0);
+      lastRotation = Vector3.zero;
+      return Vector3.zero;
     }
   }
 }

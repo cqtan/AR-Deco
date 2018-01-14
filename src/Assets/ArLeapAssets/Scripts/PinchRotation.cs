@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PinchRotation : MonoBehaviour, IGestureFeature {
+  [SerializeField] private Vector3 logRotation;
   [SerializeField] private ArGestureManager gesture;
   [SerializeField] private GameObject gestureTools;
 
@@ -21,11 +22,9 @@ public class PinchRotation : MonoBehaviour, IGestureFeature {
     ManageRotation();
 	}
 
-
-
   public bool AppropriateGesture() {
     if (gesture.LeftIndexPinch == true && gesture.RightIndexPinch == true) {
-      return false;
+      return true;
     } else {
       return false;
     }
@@ -34,9 +33,13 @@ public class PinchRotation : MonoBehaviour, IGestureFeature {
   // TODO: Check if it works!
   private void ManageRotation() {
     rotation = handRotation.CalculateRotation(AppropriateGesture());
+    logRotation = rotation;
     if (outliner.HasCollided) {
-      target = outliner.GetRayHit().collider.gameObject;
+      if (target == null)
+        target = outliner.GetRayHit().collider.gameObject;
       target.transform.Rotate(rotation);
+    } else {
+      target = null;
     }
   }
 

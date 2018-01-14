@@ -10,6 +10,7 @@ public class OutlineWithRay : MonoBehaviour {
   public bool HasCollided { get; private set; }
   public LineRenderer Line { get; set; }
 
+  [SerializeField] private bool collisionDetected;
   [SerializeField] private bool lineIsVisible;
   [SerializeField] private bool rayIsBackwards;
   [SerializeField] private Material MaterialOnHit;
@@ -33,9 +34,11 @@ public class OutlineWithRay : MonoBehaviour {
 
     if (RayIsColliding()) {
       HasCollided = true;
+      collisionDetected = HasCollided;
       ManageOutline();
     } else {
       HasCollided = false;
+      collisionDetected = HasCollided;
     }
 	}
 

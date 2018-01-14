@@ -97,14 +97,14 @@ public class ArGestureManager : MonoBehaviour {
         Vector3 thumbPos = leftThumb.transform.position;
         Vector3 indexPos = leftIndex.transform.position;
         float distance = Vector3.Distance(thumbPos, indexPos);
-        LeftIndexPinch = distance < 0.02f ? true : false;
+        LeftIndexPinch = distance < 0.03f ? true : false;
       } 
 
       if (hand.IsRight && RightGrabAngle < 1.8f) {
         Vector3 thumbPos = rightThumb.transform.position;
         Vector3 indexPos = rightIndex.transform.position;
         float distance = Vector3.Distance(thumbPos, indexPos);
-        RightIndexPinch = distance < 0.02f ? true : false;
+        RightIndexPinch = distance < 0.03f ? true : false;
       }
     }
   }
