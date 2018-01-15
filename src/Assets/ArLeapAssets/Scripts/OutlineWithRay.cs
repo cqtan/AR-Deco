@@ -84,6 +84,9 @@ public class OutlineWithRay : MonoBehaviour {
     }
   }
 
+  /// <summary>
+  /// Creates a visible line for debugging purposes.
+  /// </summary>
   private void createLine() {
     if (lineIsVisible) {
       Line = rayOrigin.gameObject.GetComponent<LineRenderer>() == null ? 

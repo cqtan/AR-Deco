@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/ArLeapAssets/Scenes/ArLeap_v123.unity
+- path: Assets/ArLeapAssets/Scenes/ArLeap_v132.unity
   isLoaded: 1
   isActive: 1

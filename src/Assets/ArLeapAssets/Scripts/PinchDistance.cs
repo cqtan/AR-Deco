@@ -14,7 +14,11 @@ using UnityEngine;
 public class PinchDistance : MonoBehaviour, IGestureFeature {
   [SerializeField] private ArGestureManager gesture;
   [SerializeField] private GameObject gestureTools;
-  [SerializeField] private float distanceModifier;
+  [SerializeField] private float distanceModifier; // 400
+  [SerializeField] private Transform lookAtTarget;
+  [SerializeField] private float minDistance;
+  [SerializeField] private float maxDistance;
+  [SerializeField] private float logDistance;
 
   private OutlineWithRay outliner;
   private HandDistance handDistance;
@@ -55,12 +59,24 @@ public class PinchDistance : MonoBehaviour, IGestureFeature {
       return false;
   }
 
+  private void PlaceWithinConstraints() {
+    float distance = Vector3.Distance(lookAtTarget.transform.position,
+                                      grabbedObject.transform.position);
+    logDistance = distance;
+    if (distance <= minDistance) {
+      grabbedObject.transform.position += transform.forward * 1.1f * Time.deltaTime;
+    } else if (distance >= maxDistance){
+      grabbedObject.transform.position += transform.forward * -1.1f * Time.deltaTime;
+    }
+  }
+
   /// <summary>
   /// Manages the distance of the grabbed object
   /// </summary>
   private void ManageDistance() {
     distanceDifference = handDistance.CalculateHandDistance(AppropriateGesture(), distanceModifier);
-    grabbedObject.transform.position += new Vector3(0f, distanceDifference, 0f);
+    grabbedObject.transform.position += transform.forward * distanceDifference * Time.deltaTime;
+    PlaceWithinConstraints();
   }
 
 }

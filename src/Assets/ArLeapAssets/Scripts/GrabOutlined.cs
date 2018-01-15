@@ -12,6 +12,7 @@ public class GrabOutlined : MonoBehaviour, IGestureFeature {
   [SerializeField] private ArGestureManager gesture;
   [SerializeField] private OutlineWithRay outliner;
   [SerializeField] private GameObject parentObject;
+  [SerializeField] private Transform lookAtTarget;
 
   private GameObject grabbedObject;
   private Collider collisionObject;
@@ -83,6 +84,7 @@ public class GrabOutlined : MonoBehaviour, IGestureFeature {
   }
 
   private void UpdateObjectPosition(GameObject go) {
+    grabPoint.transform.LookAt(lookAtTarget);
     go.transform.position = grabPoint.transform.position;
   }
 

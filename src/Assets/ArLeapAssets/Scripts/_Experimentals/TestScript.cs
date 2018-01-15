@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TestScript : MonoBehaviour {
+  [SerializeField] private Transform lookAtTarget;
 
 	private float min = 1.0f;
 	private float max = 2.0f;
+  private float moveSpeed = 5f;
 
 	// starting value for the Lerp
 	static float t = 0.0f;
@@ -17,13 +19,30 @@ public class TestScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.Q)) {
-			StartCoroutine(OutlineLerp(min, max, 0.5f));
-		}
+		//if (Input.GetKeyDown (KeyCode.Q)) {
+		//	StartCoroutine(OutlineLerp(min, max, 0.5f));
+		//}
 
-		if (Input.GetKeyDown (KeyCode.E)) {
-			StartCoroutine(OutlineLerp(max, min, 0.5f));
-		}
+		//if (Input.GetKeyDown (KeyCode.E)) {
+		//	StartCoroutine(OutlineLerp(max, min, 0.5f));
+		//}
+
+    Vector3 position = this.transform.position;
+
+    if (Input.GetKey(KeyCode.C)) {
+      position.z += moveSpeed * Time.deltaTime;
+      this.transform.position = position;
+    }
+
+
+    if (Input.GetKey(KeyCode.V)) {
+      this.transform.position += transform.forward * moveSpeed * Time.deltaTime;
+    }
+    if (Input.GetKey(KeyCode.B)) {
+      this.transform.localPosition += transform.forward * -moveSpeed * Time.deltaTime;
+    }
+
+    this.transform.LookAt(lookAtTarget);
 	}
 
 	private IEnumerator OutlineLerp(float min, float max, float time)

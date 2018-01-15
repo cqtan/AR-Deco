@@ -80,6 +80,7 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
+77af03aaa7d42e65002c94f43cc72c3c Assembly-CSharp.dll:.PinchRotation
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Autofocus
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -185,7 +186,7 @@ a9e1c36c671666e79706791e556d5100 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehav
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
 2209f0b22cdf6745441c93436a753a21 Assembly-CSharp.dll:Coloreality.LeapHandFollow
 05524b8f659e7bfe5756d1335fec24ba Assembly-UnityScript-firstpass.dll:.FPSInputController
-9cb2f711b787283c588e3610146896a9 Assembly-CSharp.dll:.GrabOutlined
+eade2e17e564f60c0b80b6918a6d4616 Assembly-CSharp.dll:.GrabOutlined
 3934ca8022d4c1e2d3df62eb846732fb Assembly-CSharp.dll:.MenuAnimator
 f8c9ff80e444ad06cb8a2b031a8c362e Assembly-CSharp.dll:Coloreality.DemoSwitcher
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MenuOptions
@@ -220,7 +221,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
-90a5828378ad700721b559517779bdef Assembly-CSharp.dll:.PinchDistance
+32240ad792be24d386c253335d1cf75f Assembly-CSharp.dll:.PinchDistance
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Coloreality.LeapHandConnect
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 28a737d57aa2f0fadd73594ef9132406 Assembly-CSharp.dll:Coloreality.LeapConfigController
@@ -262,8 +263,10 @@ a9e1c36c671666e79706791e556d5100 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehav
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
 d9cf0041f6f4823d6bfcd31aabd3c1a9 Assembly-CSharp.dll:Coloreality.CameraImageView
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FrameRateSettings
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TestScript
+1d4007dd2b11f9edaf08914d3ae5a8fd Assembly-CSharp.dll:.TestScript
+d2ae5170185fb4dd951c10548541630d Assembly-CSharp.dll:.HandRotation
 563daf171b5d1c7c75b1108951401223 Assembly-UnityScript-firstpass.dll:.CharacterMotor
+52920734ec9d72e37f4cfcb3f51f2ab4 Assembly-CSharp.dll:.Emulator
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.BackgroundPlaneBehaviour
 342c9a27403d4f1a11164f989d99bd3f Vuforia.UnityExtensions.dll:Vuforia.CloudRecoBehaviour
 9519b45b1fe77ca14bbfebb6a5236e2e Vuforia.UnityExtensions.dll:Vuforia.CylinderTargetBehaviour
@@ -293,6 +296,3 @@ a9e1c36c671666e79706791e556d5100 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehav
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
-77af03aaa7d42e65002c94f43cc72c3c Assembly-CSharp.dll:.PinchRotation
-52920734ec9d72e37f4cfcb3f51f2ab4 Assembly-CSharp.dll:.Emulator
-c5020d1830dc1e539ab96bcb958e52f6 Assembly-CSharp.dll:.HandRotation

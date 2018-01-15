@@ -23,7 +23,7 @@ public class PinchRotation : MonoBehaviour, IGestureFeature {
 	}
 
   public bool AppropriateGesture() {
-    if (gesture.LeftIndexPinch == true && gesture.RightIndexPinch == true) {
+    if (gesture.LeftGrabStrength > 0.9f && gesture.RightGrabStrength > 0.9f) {
       return true;
     } else {
       return false;
