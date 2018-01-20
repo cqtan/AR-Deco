@@ -1264,7 +1264,7 @@ MonoBehaviour:
   distanceModifier: 400
   lookAtTarget: {fileID: 240028874}
   minDistance: 1
-  maxDistance: 10
+  maxDistance: 12
   logDistance: 0
 --- !u!1 &769234017
 GameObject:
