@@ -22,6 +22,7 @@ public class PinchRotation : MonoBehaviour, IGestureFeature {
     ManageRotation();
 	}
 
+  // TODO: Trying grab gesture!! Change file name
   public bool AppropriateGesture() {
     if (gesture.LeftGrabStrength > 0.9f && gesture.RightGrabStrength > 0.9f) {
       return true;
@@ -31,6 +32,7 @@ public class PinchRotation : MonoBehaviour, IGestureFeature {
   }
 
   // TODO: Check if it works!
+  // Try: Grab gesture instead!
   private void ManageRotation() {
     rotation = handRotation.CalculateRotation(AppropriateGesture());
     logRotation = rotation;

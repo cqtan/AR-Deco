@@ -45,10 +45,9 @@ public class GrabOutlined : MonoBehaviour, IGestureFeature {
   }
 
   public bool AppropriateGesture() {
-    if (gesture.RightGrabStrength > 0.9f && !(gesture.LeftGrabStrength > 0.9f) ||
-        gesture.LeftGrabStrength > 0.9f && !(gesture.RightGrabStrength > 0.9f)) {
+    if (gesture.RightGrabStrength > 0.9f || gesture.LeftGrabStrength > 0.9f)
       return true;
-    } else
+    else
       return false;
   }
 

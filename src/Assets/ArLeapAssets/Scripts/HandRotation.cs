@@ -12,12 +12,14 @@ using UnityEngine;
 /// </summary>
 public class HandRotation : MonoBehaviour {
 
+  [SerializeField] private bool usingMobile;
   [SerializeField] private Vector3 logRotationDifference;
   [SerializeField] private Transform leftPalm;
   [SerializeField] private Transform rightPalm;
   [SerializeField] private GameObject rotator;
-  private Vector3 currentRotation;
-  private Vector3 lastRotation;
+  [SerializeField] private Quaternion qDiffLog;
+  private Quaternion currentQ;
+  private Quaternion lastQ;
 
 	void Start () {}
 	
@@ -31,18 +33,23 @@ public class HandRotation : MonoBehaviour {
   /// <param name="appropriateGesture">If appropriate gesture identified, 
   /// then <c>true</c></param>
   public Vector3 CalculateRotation(bool appropriateGesture) {
-    Vector3 rotationDifference = Vector3.zero;
+    Vector3 eulerDiff = Vector3.zero;
+    Quaternion qDiff = Quaternion.Euler(0,0,0); 
     if (appropriateGesture) {
       SetRotator();
-      currentRotation = rotator.transform.eulerAngles;
-      if (lastRotation == Vector3.zero)
-        lastRotation = currentRotation;
-      rotationDifference = (currentRotation - lastRotation);
-      lastRotation = currentRotation;
-      logRotationDifference = rotationDifference;
-      return rotationDifference;
+      currentQ = rotator.transform.rotation;
+      if (lastQ == Quaternion.Euler(0,0,0))
+        lastQ = currentQ;
+      
+      qDiff = (currentQ * Quaternion.Inverse(lastQ));
+      eulerDiff = CompensateOrientation(qDiff);
+      
+      lastQ = currentQ;
+      qDiffLog = qDiff;
+      return eulerDiff;
     } else {
-      lastRotation = Vector3.zero;
+      lastQ = Quaternion.Euler(0, 0, 0);
+      qDiff = Quaternion.Euler(0, 0, 0);
       return Vector3.zero;
     }
   }
@@ -60,4 +67,24 @@ public class HandRotation : MonoBehaviour {
     rotator.transform.position = middlePoint;
     rotator.transform.LookAt(rightPalm);
   }
+
+  /// <summary>
+  /// Compensates the orientation when using a smartphone since it is
+  /// then held horizontally.
+  /// TODO: Maybe: y -> x / x -> y, switched back
+  /// </summary>
+  /// <returns>The difference in orientation but compensated.</returns>
+  /// <param name="rotationDifference">Difference in rotation.</param>
+  private Vector3 CompensateOrientation(Quaternion q) {
+    Vector3 euler;
+    euler.x = q.eulerAngles.x;
+    euler.y = -q.eulerAngles.y; // correct 
+    euler.z = -q.eulerAngles.z;
+    return euler;
+  }
+
+
+
+
+
 }

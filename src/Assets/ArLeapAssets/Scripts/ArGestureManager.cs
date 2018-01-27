@@ -24,7 +24,6 @@ public class ArGestureManager : MonoBehaviour {
   [SerializeField] private GameObject leftIndex;
   [SerializeField] private GameObject rightThumb;
   [SerializeField] private GameObject rightIndex;
-
   private List<LeapHand> hands;
 
   void Start() {

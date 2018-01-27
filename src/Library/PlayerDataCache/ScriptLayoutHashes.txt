@@ -263,8 +263,8 @@ a9e1c36c671666e79706791e556d5100 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehav
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
 d9cf0041f6f4823d6bfcd31aabd3c1a9 Assembly-CSharp.dll:Coloreality.CameraImageView
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FrameRateSettings
-1d4007dd2b11f9edaf08914d3ae5a8fd Assembly-CSharp.dll:.TestScript
-d2ae5170185fb4dd951c10548541630d Assembly-CSharp.dll:.HandRotation
+d66be6d47b3e02a7d56c0f57c2196f3d Assembly-CSharp.dll:.TestScript
+1ddb11f3a15befed54336682d91c9eb2 Assembly-CSharp.dll:.HandRotation
 563daf171b5d1c7c75b1108951401223 Assembly-UnityScript-firstpass.dll:.CharacterMotor
 52920734ec9d72e37f4cfcb3f51f2ab4 Assembly-CSharp.dll:.Emulator
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.BackgroundPlaneBehaviour
