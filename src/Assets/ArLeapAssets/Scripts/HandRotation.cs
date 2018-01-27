@@ -71,20 +71,14 @@ public class HandRotation : MonoBehaviour {
   /// <summary>
   /// Compensates the orientation when using a smartphone since it is
   /// then held horizontally.
-  /// TODO: Maybe: y -> x / x -> y, switched back
   /// </summary>
   /// <returns>The difference in orientation but compensated.</returns>
   /// <param name="rotationDifference">Difference in rotation.</param>
   private Vector3 CompensateOrientation(Quaternion q) {
     Vector3 euler;
     euler.x = q.eulerAngles.x;
-    euler.y = -q.eulerAngles.y; // correct 
+    euler.y = -q.eulerAngles.y;
     euler.z = -q.eulerAngles.z;
     return euler;
   }
-
-
-
-
-
 }
