@@ -31,6 +31,7 @@ public class GrabOutlined : MonoBehaviour, IGestureFeature {
     } else if (grabbedObject != null) {
       grabbedObject = null;
     }
+    PlaceWithinContraints(grabPoint);
 	}
 
   private void GrabObject() {
@@ -112,5 +113,19 @@ public class GrabOutlined : MonoBehaviour, IGestureFeature {
     string name = col.name;
     if (name.IndexOf("Vu") > -1) return true;
     else return false;
+  }
+
+  private void PlaceWithinContraints(GameObject g) {
+    if (g != null && grabbedObject != null) {
+      float distance = Vector3.Distance(lookAtTarget.transform.position,
+                                        g.transform.position);
+      if (distance < 1f) {
+        g.transform.position += transform.forward * 1.1f * Time.deltaTime;
+        UpdateObjectPosition(grabbedObject);
+      } else if (distance > 12) {
+        UpdateObjectPosition(grabbedObject);
+        g.transform.position += transform.forward * -1.1f * Time.deltaTime;
+      }
+    }
   }
 }

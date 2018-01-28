@@ -16,23 +16,22 @@ public class PinchDistance : MonoBehaviour, IGestureFeature {
   [SerializeField] private GameObject gestureTools;
   [SerializeField] private float distanceModifier; // 400
   [SerializeField] private Transform lookAtTarget;
-  [SerializeField] private float minDistance;
-  [SerializeField] private float maxDistance;
+  [SerializeField] private float minDistance; // 1
+  [SerializeField] private float maxDistance; // 12
   [SerializeField] private float logDistance;
 
-  private OutlineWithRay outliner;
   private HandDistance handDistance;
-  private GameObject grabbedObject;
+  private GameObject target;
   private float distanceDifference;
 
 	void Start () {
-    outliner = gestureTools.GetComponent<OutlineWithRay>();
     handDistance = gestureTools.GetComponent<HandDistance>();
   }
 	
 	void Update () {
-    if (SearchGrabbedObject()) {
-      ManageDistance();
+    if (SearchGrabbedObject() && AppropriateGesture()) {
+      ManageDistance(target);
+      PlaceWithinConstraints(target);
     }
 	}
 
@@ -44,7 +43,7 @@ public class PinchDistance : MonoBehaviour, IGestureFeature {
   /// <returns><c>true</c>, if grabbed object was found, <c>false</c> otherwise.</returns>
   private bool SearchGrabbedObject() {
     if (GameObject.Find("GrabPoint") != null) {
-      grabbedObject = GameObject.Find("GrabPoint");
+      target = GameObject.Find("GrabPoint");
       return true;
     } else {
       return false;
@@ -52,31 +51,34 @@ public class PinchDistance : MonoBehaviour, IGestureFeature {
   }
 
   public bool AppropriateGesture() {
-    if ((gesture.RightIndexPinch == true && gesture.LeftGrabStrength > 0.9f) || 
-        (gesture.LeftIndexPinch == true && gesture.RightGrabStrength > 0.9f)) {
+    if (((gesture.RightIndexPinch == true && gesture.LeftGrabStrength > 0.9f) ||
+        (gesture.LeftIndexPinch == true && gesture.RightGrabStrength > 0.9f)) &&
+        !(gesture.LeftIndexPinch == true && gesture.RightIndexPinch == true)) {
       return true;
+    } else if (handDistance.CurrentGesture == Enums.Gestures.DistanceGesture) {
+      handDistance.ResetLastDistance();
+      return false;
     } else
       return false;
-  }
-
-  private void PlaceWithinConstraints() {
-    float distance = Vector3.Distance(lookAtTarget.transform.position,
-                                      grabbedObject.transform.position);
-    logDistance = distance;
-    if (distance <= minDistance) {
-      grabbedObject.transform.position += transform.forward * 1.1f * Time.deltaTime;
-    } else if (distance >= maxDistance){
-      grabbedObject.transform.position += transform.forward * -1.1f * Time.deltaTime;
-    }
   }
 
   /// <summary>
   /// Manages the distance of the grabbed object
   /// </summary>
-  private void ManageDistance() {
-    distanceDifference = handDistance.CalculateHandDistance(AppropriateGesture(), distanceModifier);
-    grabbedObject.transform.position += transform.forward * distanceDifference * Time.deltaTime;
-    PlaceWithinConstraints();
+  private void ManageDistance(GameObject t) {
+    distanceDifference = handDistance.CalculateHandDistance(Enums.Gestures.DistanceGesture, 
+                                                            distanceModifier);
+    t.transform.position += transform.forward * distanceDifference * Time.deltaTime;
   }
 
+  private void PlaceWithinConstraints(GameObject t) {
+    float distance = Vector3.Distance(lookAtTarget.transform.position,
+                                      t.transform.position);
+    logDistance = distance;
+    if (distance <= minDistance) {
+      t.transform.position += transform.forward * 1.1f * Time.deltaTime;
+    } else if (distance >= maxDistance) {
+      t.transform.position += transform.forward * -1.1f * Time.deltaTime;
+    }
+  }
 }
