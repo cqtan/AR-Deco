@@ -67,7 +67,12 @@ public class OutlineWithRay : MonoBehaviour {
       StartCoroutine(OutlineLerp(go, max, min, 0.5f));
       previousGo = go;
     } else if (previousGo != null) {
-      if (previousGo.GetComponent<MeshRenderer>().material.GetFloat("_OutlineWidth") == max) {
+      //if (previousGo.GetComponent<MeshRenderer>().material.GetFloat("_OutlineWidth") == max) {
+      //  StartCoroutine(OutlineLerp(previousGo, max, min, 0.5f));
+      //  previousGo = null;
+      //}
+      MeshRenderer mesh = previousGo.GetComponentInChildren<MeshRenderer>();
+      if (mesh.material.GetFloat("_OutlineWidth") == max) {
         StartCoroutine(OutlineLerp(previousGo, max, min, 0.5f));
         previousGo = null;
       }
@@ -76,11 +81,17 @@ public class OutlineWithRay : MonoBehaviour {
 
   private IEnumerator OutlineLerp(GameObject go, float min, float max, float time) {
     float elapsedTime = 0;
+    MeshRenderer[] childrenMesh = go.GetComponentsInChildren<MeshRenderer>();
     
     while (elapsedTime < time) {
-      go.GetComponent<MeshRenderer>().material.SetFloat("_OutlineWidth", Mathf.Lerp(min, max, (elapsedTime / time)));
-      elapsedTime += Time.deltaTime;
-      yield return new WaitForEndOfFrame();
+      foreach (MeshRenderer m in childrenMesh) {
+        m.material.SetFloat("_OutlineWidth", Mathf.Lerp(min, max, (elapsedTime / time)));
+        elapsedTime += Time.deltaTime;
+        yield return new WaitForEndOfFrame();
+      }
+      //go.GetComponent<MeshRenderer>().material.SetFloat("_OutlineWidth", Mathf.Lerp(min, max, (elapsedTime / time)));
+      //elapsedTime += Time.deltaTime;
+      //yield return new WaitForEndOfFrame();
     }
   }
 

@@ -44,11 +44,9 @@ MonoBehaviour:
       ContainsMagnet: 0
   databaseLoad:
     dataSetsToLoad:
-    - AR-Jung
-    - SofaVuButton
+    - VuLeap
     dataSetsToActivate:
-    - AR-Jung
-    - SofaVuButton
+    - VuLeap
   videoBackground:
     clippingMode: 0
     numDivisions: 2

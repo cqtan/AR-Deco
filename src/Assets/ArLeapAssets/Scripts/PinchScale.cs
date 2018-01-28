@@ -6,7 +6,6 @@ public class PinchScale : MonoBehaviour, IGestureFeature {
   [SerializeField] private ArGestureManager gesture;
   [SerializeField] private GameObject gestureTools;
   [SerializeField] private float scaleModifier; // 0.02f
-
   [SerializeField] private float minScale; // 0.01f
   [SerializeField] private float maxScale; // 1f
   [SerializeField] private float logScale;
@@ -64,7 +63,6 @@ public class PinchScale : MonoBehaviour, IGestureFeature {
 
   private void PlaceWithinConstraints(GameObject t) {
     Vector3 targetScale = t.transform.localScale;
-
     if (targetScale.x < minScale)
       targetScale = new Vector3(minScale, minScale, minScale);
     if (targetScale.x > maxScale)

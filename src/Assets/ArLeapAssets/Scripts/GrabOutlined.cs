@@ -119,10 +119,10 @@ public class GrabOutlined : MonoBehaviour, IGestureFeature {
     if (g != null && grabbedObject != null) {
       float distance = Vector3.Distance(lookAtTarget.transform.position,
                                         g.transform.position);
-      if (distance < 1f) {
+      if (distance < 0.5f) {
         g.transform.position += transform.forward * 1.1f * Time.deltaTime;
         UpdateObjectPosition(grabbedObject);
-      } else if (distance > 12) {
+      } else if (distance > 8) {
         UpdateObjectPosition(grabbedObject);
         g.transform.position += transform.forward * -1.1f * Time.deltaTime;
       }
