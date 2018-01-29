@@ -281,6 +281,8 @@
     <Compile Include="Assets\ArLeapAssets\Scripts\PinchDistance.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\PinchScale.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\RaycastOutliner.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\Remover.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\RemoveWithButton.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\VuBtnChangeMaterial.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\VuButtonPressFeedback.cs" />
     <Compile Include="Assets\Coloreality\Demo\Scripts\DemoSwitcher.cs" />
