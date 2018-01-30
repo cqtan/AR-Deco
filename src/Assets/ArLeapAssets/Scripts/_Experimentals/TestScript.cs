@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Currently testing: Rotation
+// The RotatorVisualized object is only for visual
 public class TestScript : MonoBehaviour {
   [SerializeField] private GameObject target;
   [SerializeField] private GameObject lookAtThing;

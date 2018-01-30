@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Scales the targeted object when performing the pinch gesture with
+/// both hands. The larger the distance of both hands are while 
+/// performing this gesture, the larger the object becomes and 
+/// vice-versa.
+/// </summary>
 public class PinchScale : MonoBehaviour, IGestureFeature {
   [SerializeField] private ArGestureManager gesture;
   [SerializeField] private GameObject gestureTools;
-  [SerializeField] private float scaleModifier; // 0.02f
-  [SerializeField] private float minScale; // 0.01f
-  [SerializeField] private float maxScale; // 1f
+  [SerializeField] private float scaleModifier; // 5f
+  [SerializeField] private float minScale; // 0.5f
+  [SerializeField] private float maxScale; // 3f
   [SerializeField] private float logScale;
 
   [SerializeField] private GameObject testTarget;

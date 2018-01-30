@@ -264,8 +264,11 @@
   <ItemGroup>
     <Compile Include="Assets\ArLeapAssets\Scripts\_Experimentals\CameraRenderer.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\_Experimentals\CamToggle.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\_Experimentals\RaycastOutliner.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\_Experimentals\Remover.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\_Experimentals\RotateRayOrigin.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\_Experimentals\TestScript.cs" />
+    <Compile Include="Assets\ArLeapAssets\Scripts\_Experimentals\VuBtnChangeMaterial.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\ArGestureManager.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\CamRotate.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\CorrectFurnitureRotation.cs" />
@@ -280,10 +283,7 @@
     <Compile Include="Assets\ArLeapAssets\Scripts\OutlineWithRay.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\PinchDistance.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\PinchScale.cs" />
-    <Compile Include="Assets\ArLeapAssets\Scripts\RaycastOutliner.cs" />
-    <Compile Include="Assets\ArLeapAssets\Scripts\Remover.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\RemoveWithButton.cs" />
-    <Compile Include="Assets\ArLeapAssets\Scripts\VuBtnChangeMaterial.cs" />
     <Compile Include="Assets\ArLeapAssets\Scripts\VuButtonPressFeedback.cs" />
     <Compile Include="Assets\Coloreality\Demo\Scripts\DemoSwitcher.cs" />
     <Compile Include="Assets\Coloreality\Demo\Scripts\LeapHandConnect.cs" />
@@ -322,7 +322,6 @@
     <None Include="Assets\Editor\Vuforia\VuforiaMars_VuMark\authoringinfo.xml" />
     <None Include="Assets\SampleResources\AugmentationAssets\Shaders\Character.shader" />
     <None Include="Assets\SampleResources\AugmentationAssets\Shaders\CharacterHelper.cginc" />
-    <None Include="Assets\StreamingAssets\Vuforia\AR-Jung.xml" />
     <None Include="Assets\StreamingAssets\Vuforia\SofaVuButton.xml" />
     <None Include="Assets\StreamingAssets\Vuforia\VuLeap.xml" />
     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Images.xml" />
